@@ -49,3 +49,8 @@ def post_publish(request, pk):
 
 def post_self_destruct(request):
     return render(request,'blog/self_destruct_page.html')
+
+def post_remove(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.delete()
+    return redirect('post_list')

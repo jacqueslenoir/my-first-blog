@@ -9,4 +9,5 @@ urlpatterns = [
     path('drafts/',views.post_draft_list,name='post_draft_list'),
     path('post/<pk>/publish/', views.post_publish, name='post_publish'),
     path('post/self_destruct/', views.post_self_destruct, name="post_self_destruct"),
+    path('post/<pk>/remove/', views.post_remove, name='post_remove'),
 ]
